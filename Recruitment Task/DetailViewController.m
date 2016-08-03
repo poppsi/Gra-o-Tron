@@ -18,7 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = [[NSString stringWithString:self.titleString] stringByAppendingString:@" biography"];
+    //Check if favourite.
+    if (self.favBool == YES) {
+        self.navigationItem.title = [[NSString stringWithString:self.titleString] stringByAppendingString:@" <333"];
+    } else if (self.favBool == NO) {
+        self.navigationItem.title = [[NSString stringWithString:self.titleString] stringByAppendingString:@" biography"];
+    }
 
     [self.abstractLabel sizeToFit];
     self.abstractLabel.adjustsFontSizeToFitWidth = YES;
@@ -60,4 +65,6 @@
         
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:finalLink]];
 }
+
+
 @end

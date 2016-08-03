@@ -18,7 +18,10 @@
 @property (strong, nonatomic) NSString *abstractString;
 @property (strong, nonatomic) NSString *thumbnailAdress;
 @property (strong, nonatomic) NSString *linkString;
+@property (nonatomic) BOOL favBool;
+
 
 - (IBAction)readMoreButton:(UIButton *)sender;
+
 
 @end

@@ -159,19 +159,15 @@
     
     //Reorganize cells: Favourite / Not favourite.
     if (indexPath.section == 0) {
-        //AccessoryButton selection.
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isFavourite"];
-        
         ArticleObject *articleObject = [self.articlesFavourite objectAtIndex:indexPath.row];
+        articleObject.isFavourite = NO;
         [self.articlesFavourite removeObject:articleObject];
         [self.articlesReceived insertObject:articleObject atIndex:0];
     }
     
     if (indexPath.section == 1) {
-        //AccessoryButton selection.
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFavourite"];
-        
         ArticleObject *articleObject = [self.articlesReceived objectAtIndex:indexPath.row];
+        articleObject.isFavourite = YES;
         [self.articlesReceived removeObject:articleObject];
         [self.articlesFavourite addObject:articleObject];
     }
@@ -199,6 +195,7 @@
             detailVC.abstractString = articleData.abstract;
             detailVC.thumbnailAdress = articleData.thumbnail;
             detailVC.linkString = articleData.link;
+            detailVC.favBool = articleData.isFavourite;
         }
         
         if (indexPath.section == 1) {
@@ -210,6 +207,7 @@
             detailVC.abstractString = articleData.abstract;
             detailVC.thumbnailAdress = articleData.thumbnail;
             detailVC.linkString = articleData.link;
+            detailVC.favBool = articleData.isFavourite;
         }
     }
 }

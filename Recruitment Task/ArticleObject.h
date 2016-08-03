@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *thumbnail;
 @property (strong, nonatomic) NSString *abstract;
 @property (strong, nonatomic) NSString *link;
+@property (nonatomic) BOOL isFavourite;
 
 -(id)initWithJSONData:(NSDictionary *)data;
 

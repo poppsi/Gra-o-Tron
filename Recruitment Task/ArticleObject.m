@@ -19,6 +19,7 @@
         self.thumbnail = [data objectForKey:@"thumbnail"];
         self.abstract = [data objectForKey:@"abstract"];
         self.link = [data objectForKey:@"url"];
+        self.isFavourite = NO;
     }
     return self;
 }

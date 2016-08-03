@@ -11,7 +11,6 @@
 @implementation ArticleObject
 
 //Article initializer.
-
 -(id)initWithJSONData:(NSDictionary *)data {
     self = [super init];
     
@@ -23,7 +22,5 @@
     }
     return self;
 }
-
-
 
 @end

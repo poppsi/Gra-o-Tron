@@ -17,5 +17,4 @@
 
 -(id)initWithJSONData:(NSDictionary *)data;
 
-
 @end

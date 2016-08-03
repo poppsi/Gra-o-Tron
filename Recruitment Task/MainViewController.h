@@ -10,8 +10,9 @@
 #import "CustomCell.h"
 #import "WikiaCommunicator.h"
 #import "ArticleObject.h"
+#import "Article.h"
 
-@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CellDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

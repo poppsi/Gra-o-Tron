@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "WikiaCommunicator.h"
+#import "ArticleObject.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

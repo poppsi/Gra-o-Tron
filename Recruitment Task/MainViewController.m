@@ -12,10 +12,14 @@
 @interface MainViewController ()
 
 @property (strong, nonatomic) NSMutableArray *articlesReceived;
+@property (strong, nonatomic) NSMutableArray *articlesFavourite;
+
 
 @end
 
 @implementation MainViewController
+
+#pragma mark - Data source arrays lazy instantiation
 
 -(NSMutableArray *)articlesReceived {
     if (!_articlesReceived) {
@@ -23,6 +27,15 @@
     }
     return _articlesReceived;
 }
+
+-(NSMutableArray *)articlesFavourite {
+    if (!_articlesFavourite) {
+        _articlesFavourite = [[NSMutableArray alloc] init];
+    }
+    return _articlesFavourite;
+}
+
+#pragma mark - View
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -41,7 +54,7 @@
     
     //Get article items.
     [self getArticleData];
-   }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,42 +68,116 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.articlesReceived count];
+    NSInteger rowCount = 0;
+    
+    if (section == 0) rowCount = [self.articlesFavourite count];
+    
+    if (section == 1) rowCount = [self.articlesReceived count];
+
+    return rowCount;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *headerTitle = @"";
+    
+    if (section == 0) headerTitle = @"Favourites";
+    
+    if (section == 1) headerTitle = @"Articles";
+    
+    return headerTitle;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     /* General cell setup */
-    
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
+    
+    //CellDelegate data pass.
+    cell.delegate = self;
+    cell.cellIndexRow = indexPath.row;
+    cell.cellIndexSection = indexPath.section;
+    
     //Merging cells tag with its index path value.
     cell.tag = indexPath.row;
     
-    ArticleObject *articleItem = [self.articlesReceived objectAtIndex:indexPath.row];
-    
-    cell.titleLabel.text = articleItem.title;
-    cell.abstractLabel.text = articleItem.abstract;
-    
-    /* Cells thumbnail image setup. */
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^{
-        //Download images.
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:articleItem.thumbnail]];
-        UIImage *image = [[UIImage alloc] initWithData:imageData];
-        //Back on the main thread with loaded UI elements.
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //Check if cells tag belongs to that row.
-            if (cell.tag == indexPath.row) {
-                cell.thumbnailImage.image = image;
-            }
-        });
-    });
+    /* Sections cells setup */
 
+    //favs
+    if (indexPath.section == 0) {
+        ArticleObject *articleItem = [self.articlesFavourite objectAtIndex:indexPath.row];
+        
+        cell.titleLabel.text = articleItem.title;
+        cell.abstractLabel.text = articleItem.abstract;
+        
+        /* Cells thumbnail image setup. */
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            //Download images.
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:articleItem.thumbnail]];
+            UIImage *image = [[UIImage alloc] initWithData:imageData];
+            //Back on the main thread with loaded UI elements.
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //Check if cells tag belongs to that row.
+                if (cell.tag == indexPath.row) {
+                    cell.thumbnailImage.image = image;
+                }
+            });
+        });
+    }
+    //recvs
+    if (indexPath.section == 1) {
+        ArticleObject *articleItem = [self.articlesReceived objectAtIndex:indexPath.row];
+        
+        cell.titleLabel.text = articleItem.title;
+        cell.abstractLabel.text = articleItem.abstract;
+        
+        /* Cells thumbnail image setup. */
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            //Download images.
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:articleItem.thumbnail]];
+            UIImage *image = [[UIImage alloc] initWithData:imageData];
+            //Back on the main thread with loaded UI elements.
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //Check if cells tag belongs to that row.
+                if (cell.tag == indexPath.row) {
+                    cell.thumbnailImage.image = image;
+                }
+            });
+        });
+    }
+    
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+#pragma mark - CellDelegate method
+
+-(void)didClickOnCellAtIndexRow:(NSInteger)cellIndexRow inSection:(NSInteger)cellIndexSection {
+    //To recognize cells index path on custom button click.
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:cellIndexRow inSection:cellIndexSection];
     
+    //Reorganize cells: Favourite / Not favourite.
+    if (indexPath.section == 0) {
+        //AccessoryButton selection.
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isFavourite"];
+        
+        ArticleObject *articleObject = [self.articlesFavourite objectAtIndex:indexPath.row];
+        [self.articlesFavourite removeObject:articleObject];
+        [self.articlesReceived insertObject:articleObject atIndex:0];
+    }
+    
+    if (indexPath.section == 1) {
+        //AccessoryButton selection.
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFavourite"];
+        
+        ArticleObject *articleObject = [self.articlesReceived objectAtIndex:indexPath.row];
+        [self.articlesReceived removeObject:articleObject];
+        [self.articlesFavourite addObject:articleObject];
+    }
+    
+    //Refresh table view.
+    [self.tableView reloadData];
 }
 
 #pragma mark - Navigation
@@ -102,13 +189,28 @@
     if ([[segue identifier] isEqualToString:@"toDetailVC"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ArticleObject *articleData = [self.articlesReceived objectAtIndex:indexPath.row];
         
-        DetailViewController *detailVC = segue.destinationViewController;
-        detailVC.titleString = articleData.title;
-        detailVC.abstractString = articleData.abstract;
-        detailVC.thumbnailAdress = articleData.thumbnail;
-        detailVC.linkString = articleData.link;
+        if (indexPath.section == 0) {
+            //favs
+            ArticleObject *articleData = [self.articlesFavourite objectAtIndex:indexPath.row];
+            
+            DetailViewController *detailVC = segue.destinationViewController;
+            detailVC.titleString = articleData.title;
+            detailVC.abstractString = articleData.abstract;
+            detailVC.thumbnailAdress = articleData.thumbnail;
+            detailVC.linkString = articleData.link;
+        }
+        
+        if (indexPath.section == 1) {
+            //recvs
+            ArticleObject *articleData = [self.articlesReceived objectAtIndex:indexPath.row];
+            
+            DetailViewController *detailVC = segue.destinationViewController;
+            detailVC.titleString = articleData.title;
+            detailVC.abstractString = articleData.abstract;
+            detailVC.thumbnailAdress = articleData.thumbnail;
+            detailVC.linkString = articleData.link;
+        }
     }
 }
 
@@ -131,21 +233,21 @@
             if (serializationError) {
                 NSLog(@"Serialization error: %@", [serializationError description]);
             } else {
+                
                 for (NSDictionary *articleData in wikiaResults) {
-                    ArticleObject *article = [[ArticleObject alloc] initWithJSONData:articleData];
-                    [self.articlesReceived addObject:article];
+                    ArticleObject *articleObject = [[ArticleObject alloc] initWithJSONData:articleData];
+                    [self.articlesReceived addObject:articleObject];
                 }
             }
             
+            //Refresh when data was loaded succesfully.
             [self.tableView reloadData];
             
         } else {
             
             NSLog(@"No data was fetched");
         }
-        
     }];
-    
 }
 
 @end

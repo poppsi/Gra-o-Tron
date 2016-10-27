@@ -8,6 +8,8 @@
 
 #import "WikiaCommunicator.h"
 
+#define URL @"http://gameofthrones.wikia.com/api/v1/Articles/Top?expand=1&category=Characters&limit=75"
+
 @implementation WikiaCommunicator
 
 //Wikia communicator for fetching Wikia data.
@@ -19,7 +21,6 @@
     
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != nil) {
-            // If any error occurs then just display its description on the console.
             NSLog(@"Session error: %@", [error localizedDescription]);
         } else {
             //To not block UI with loading data.

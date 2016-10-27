@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15F34" minimumToolsVersion="Automatic">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1108" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Article" representedClassName="Article" syncable="YES">
         <attribute name="abstract" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isFavourite" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Article" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Article" positionX="-524" positionY="-139" width="128" height="118"/>
     </elements>
 </model>

@@ -1,25 +1,25 @@
 //
 //  Article+CoreDataProperties.h
-//  Recruitment Task
+//  Gra o Tron
 //
-//  Created by Filip Olbromski on 27.07.2016.
+//  Created by Filip Olbromski on 25.10.2016.
 //  Copyright © 2016 Filip Olbromski. All rights reserved.
 //
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
-//
 
-#import "Article.h"
+#import "Article+CoreDataClass.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Article (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *title;
-@property (nullable, nonatomic, retain) NSString *thumbnail;
-@property (nullable, nonatomic, retain) NSString *abstract;
-@property (nullable, nonatomic, retain) NSString *link;
-@property (nullable, nonatomic, retain) NSNumber *isFavourite;
++ (NSFetchRequest<Article *> *)fetchRequest;
+
+@property (nullable, nonatomic, copy) NSString *abstract;
+@property (nullable, nonatomic, copy) NSString *thumbnail;
+@property (nullable, nonatomic, copy) NSString *title;
+@property (nullable, nonatomic, copy) NSNumber *isFavourite;
+@property (nullable, nonatomic, copy) NSString *url;
 
 @end
 

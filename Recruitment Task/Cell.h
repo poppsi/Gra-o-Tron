@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  CustomCell.h
 //  Recruitment Task
 //
 //  Created by Filip Olbromski on 25.07.2016.
@@ -8,15 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface Cell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *abstractLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnailImage;
 
-@property (strong, nonatomic) NSString *titleString;
-@property (strong, nonatomic) NSString *abstractString;
-@property (strong, nonatomic) NSString *thumbnailAdress;
-@property (strong, nonatomic) NSString *linkString;
 
 @end

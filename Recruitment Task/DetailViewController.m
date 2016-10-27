@@ -17,17 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+        
+    /* Title label setup. */
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.titleLabel.text = self.titleString;
     
-    //Check if favourite.
-    if (self.favBool == YES) {
-        self.navigationItem.title = [[NSString stringWithString:self.titleString] stringByAppendingString:@" <333"];
-    } else if (self.favBool == NO) {
-        self.navigationItem.title = [[NSString stringWithString:self.titleString] stringByAppendingString:@" biography"];
-    }
-
-    [self.abstractLabel sizeToFit];
+    /* Abstract label setup. */
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(readMore)];
+    [self.abstractLabel addGestureRecognizer:tapGesture];
+    [self.abstractLabel setUserInteractionEnabled:YES];
     self.abstractLabel.adjustsFontSizeToFitWidth = YES;
-    self.abstractLabel.text = self.abstractString;
+    NSString *abstractFinalText = [self.abstractString stringByAppendingString:@" tap to read more!"];
+    self.abstractLabel.text = abstractFinalText;
     
     /* Thumbnail image setup. */
     dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
@@ -58,11 +59,10 @@
 }
 */
 
-- (IBAction)readMoreButton:(UIButton *)sender {
-
+- (void)readMore {
     NSString *preLink = @"http://gameofthrones.wikia.com";
     NSString *finalLink = [preLink stringByAppendingString:self.linkString];
-        
+    //Safari
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:finalLink]];
 }
 

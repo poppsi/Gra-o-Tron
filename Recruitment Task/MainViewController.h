@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomCell.h"
+#import "Cell.h"
 #import "WikiaCommunicator.h"
-#import "ArticleObject.h"
-#import "Article.h"
 
-@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CellDelegate>
+@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
-//Start fetching data method.
--(void)getArticleData;
 
 @end

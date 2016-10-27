@@ -1,8 +1,8 @@
 //
-//  Article.h
-//  Recruitment Task
+//  Article+CoreDataClass.h
+//  Gra o Tron
 //
-//  Created by Filip Olbromski on 27.07.2016.
+//  Created by Filip Olbromski on 25.10.2016.
 //  Copyright © 2016 Filip Olbromski. All rights reserved.
 //
 
@@ -12,8 +12,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Article : NSManagedObject
-
-// Insert code here to declare functionality of your managed object subclass
 
 @end
 

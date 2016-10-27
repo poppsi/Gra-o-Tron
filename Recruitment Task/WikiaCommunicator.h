@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface WikiaCommunicator : NSObject
 
 +(void)fetchDataFromWikia:(NSURL *)url withCompletionHandler:(void (^)(NSData *data))completionHandler;

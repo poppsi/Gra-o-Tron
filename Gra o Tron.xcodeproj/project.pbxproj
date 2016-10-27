@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5311287D1D51F32100149797 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 5311287C1D51F32100149797 /* like.png */; };
-		531468261D48C8F2000B5BB0 /* Article+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 531468231D48C8F2000B5BB0 /* Article+CoreDataProperties.m */; };
-		531468271D48C8F2000B5BB0 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 531468251D48C8F2000B5BB0 /* Article.m */; };
+		5314B9DB1DC0D3AE00995E83 /* Like It.png in Resources */ = {isa = PBXBuildFile; fileRef = 5314B9DA1DC0D3AE00995E83 /* Like It.png */; };
 		535B0A0A1D464C5200CA0D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A091D464C5200CA0D91 /* main.m */; };
 		535B0A0D1D464C5200CA0D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A0C1D464C5200CA0D91 /* AppDelegate.m */; };
 		535B0A131D464C5200CA0D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535B0A111D464C5200CA0D91 /* Main.storyboard */; };
@@ -21,9 +20,11 @@
 		535B0A401D464E9500CA0D91 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A3F1D464E9500CA0D91 /* MainViewController.m */; };
 		535B0A431D464EBE00CA0D91 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A421D464EBE00CA0D91 /* DetailViewController.m */; };
 		535B0A4B1D46572600CA0D91 /* WikiaCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A4A1D46572600CA0D91 /* WikiaCommunicator.m */; };
-		535B0A4E1D46614E00CA0D91 /* ArticleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A4D1D46614E00CA0D91 /* ArticleObject.m */; };
-		535B0A591D46838000CA0D91 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A581D46838000CA0D91 /* CustomCell.m */; };
+		535B0A591D46838000CA0D91 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B0A581D46838000CA0D91 /* Cell.m */; };
 		538021F21D4A240500330D8D /* GameOfThrones.png in Resources */ = {isa = PBXBuildFile; fileRef = 538021F11D4A240500330D8D /* GameOfThrones.png */; };
+		53FC8B9E1DBFBED5006F184E /* Article+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FC8B9B1DBFBED5006F184E /* Article+CoreDataClass.m */; };
+		53FC8B9F1DBFBED5006F184E /* Article+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FC8B9D1DBFBED5006F184E /* Article+CoreDataProperties.m */; };
+		53FD950B1DBCF1370012EF26 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53FD950A1DBCF1370012EF26 /* Cell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +46,8 @@
 
 /* Begin PBXFileReference section */
 		5311287C1D51F32100149797 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
-		531468221D48C8F2000B5BB0 /* Article+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Article+CoreDataProperties.h"; path = "../Article+CoreDataProperties.h"; sourceTree = "<group>"; };
-		531468231D48C8F2000B5BB0 /* Article+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Article+CoreDataProperties.m"; path = "../Article+CoreDataProperties.m"; sourceTree = "<group>"; };
-		531468241D48C8F2000B5BB0 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = ../Article.h; sourceTree = "<group>"; };
-		531468251D48C8F2000B5BB0 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = ../Article.m; sourceTree = "<group>"; };
-		535B0A051D464C5100CA0D91 /* Recruitment Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recruitment Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5314B9DA1DC0D3AE00995E83 /* Like It.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like It.png"; sourceTree = "<group>"; };
+		535B0A051D464C5100CA0D91 /* Gra o Tron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gra o Tron.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535B0A091D464C5200CA0D91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		535B0A0B1D464C5200CA0D91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		535B0A0C1D464C5200CA0D91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,10 +56,10 @@
 		535B0A171D464C5200CA0D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		535B0A1A1D464C5200CA0D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		535B0A1C1D464C5200CA0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		535B0A211D464C5200CA0D91 /* Recruitment TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recruitment TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		535B0A211D464C5200CA0D91 /* Gra o TronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gra o TronTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535B0A251D464C5200CA0D91 /* Recruitment_TaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recruitment_TaskTests.m; sourceTree = "<group>"; };
 		535B0A271D464C5200CA0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		535B0A2C1D464C5200CA0D91 /* Recruitment TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recruitment TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		535B0A2C1D464C5200CA0D91 /* Gra o TronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gra o TronUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535B0A301D464C5200CA0D91 /* Recruitment_TaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recruitment_TaskUITests.m; sourceTree = "<group>"; };
 		535B0A321D464C5200CA0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		535B0A3E1D464E9500CA0D91 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -70,11 +68,14 @@
 		535B0A421D464EBE00CA0D91 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		535B0A491D46572600CA0D91 /* WikiaCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiaCommunicator.h; sourceTree = "<group>"; };
 		535B0A4A1D46572600CA0D91 /* WikiaCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiaCommunicator.m; sourceTree = "<group>"; };
-		535B0A4C1D46614E00CA0D91 /* ArticleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleObject.h; sourceTree = "<group>"; };
-		535B0A4D1D46614E00CA0D91 /* ArticleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleObject.m; sourceTree = "<group>"; };
-		535B0A571D46838000CA0D91 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		535B0A581D46838000CA0D91 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		535B0A571D46838000CA0D91 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		535B0A581D46838000CA0D91 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		538021F11D4A240500330D8D /* GameOfThrones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOfThrones.png; sourceTree = "<group>"; };
+		53FC8B9A1DBFBED5006F184E /* Article+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Article+CoreDataClass.h"; path = "../Article+CoreDataClass.h"; sourceTree = "<group>"; };
+		53FC8B9B1DBFBED5006F184E /* Article+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Article+CoreDataClass.m"; path = "../Article+CoreDataClass.m"; sourceTree = "<group>"; };
+		53FC8B9C1DBFBED5006F184E /* Article+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Article+CoreDataProperties.h"; path = "../Article+CoreDataProperties.h"; sourceTree = "<group>"; };
+		53FC8B9D1DBFBED5006F184E /* Article+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Article+CoreDataProperties.m"; path = "../Article+CoreDataProperties.m"; sourceTree = "<group>"; };
+		53FD950A1DBCF1370012EF26 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +106,9 @@
 		535B09FC1D464C5100CA0D91 = {
 			isa = PBXGroup;
 			children = (
-				535B0A071D464C5100CA0D91 /* Recruitment Task */,
-				535B0A241D464C5200CA0D91 /* Recruitment TaskTests */,
-				535B0A2F1D464C5200CA0D91 /* Recruitment TaskUITests */,
+				535B0A071D464C5100CA0D91 /* Gra o Tron */,
+				535B0A241D464C5200CA0D91 /* Gra o Tron TaskTests */,
+				535B0A2F1D464C5200CA0D91 /* Gra o Tron TaskUITests */,
 				535B0A061D464C5100CA0D91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,33 +116,35 @@
 		535B0A061D464C5100CA0D91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				535B0A051D464C5100CA0D91 /* Recruitment Task.app */,
-				535B0A211D464C5200CA0D91 /* Recruitment TaskTests.xctest */,
-				535B0A2C1D464C5200CA0D91 /* Recruitment TaskUITests.xctest */,
+				535B0A051D464C5100CA0D91 /* Gra o Tron.app */,
+				535B0A211D464C5200CA0D91 /* Gra o TronTests.xctest */,
+				535B0A2C1D464C5200CA0D91 /* Gra o TronUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		535B0A071D464C5100CA0D91 /* Recruitment Task */ = {
+		535B0A071D464C5100CA0D91 /* Gra o Tron */ = {
 			isa = PBXGroup;
 			children = (
 				535B0A171D464C5200CA0D91 /* Assets.xcassets */,
 				535B0A1C1D464C5200CA0D91 /* Info.plist */,
 				535B0A191D464C5200CA0D91 /* LaunchScreen.storyboard */,
 				535B0A111D464C5200CA0D91 /* Main.storyboard */,
+				53FD950A1DBCF1370012EF26 /* Cell.xib */,
 				535B0A0B1D464C5200CA0D91 /* AppDelegate.h */,
 				535B0A0C1D464C5200CA0D91 /* AppDelegate.m */,
 				535B0A481D46551B00CA0D91 /* Views */,
 				535B0A471D46551300CA0D91 /* Models */,
 				535B0A081D464C5100CA0D91 /* Supporting Files */,
 			);
+			name = "Gra o Tron";
 			path = "Recruitment Task";
 			sourceTree = "<group>";
 		};
 		535B0A081D464C5100CA0D91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				538021F31D4A4CAC00330D8D /* CoreData */,
+				5314B9DA1DC0D3AE00995E83 /* Like It.png */,
 				538021F11D4A240500330D8D /* GameOfThrones.png */,
 				5311287C1D51F32100149797 /* like.png */,
 				535B0A091D464C5200CA0D91 /* main.m */,
@@ -149,33 +152,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		535B0A241D464C5200CA0D91 /* Recruitment TaskTests */ = {
+		535B0A241D464C5200CA0D91 /* Gra o Tron TaskTests */ = {
 			isa = PBXGroup;
 			children = (
 				535B0A251D464C5200CA0D91 /* Recruitment_TaskTests.m */,
 				535B0A271D464C5200CA0D91 /* Info.plist */,
 			);
+			name = "Gra o Tron TaskTests";
 			path = "Recruitment TaskTests";
 			sourceTree = "<group>";
 		};
-		535B0A2F1D464C5200CA0D91 /* Recruitment TaskUITests */ = {
+		535B0A2F1D464C5200CA0D91 /* Gra o Tron TaskUITests */ = {
 			isa = PBXGroup;
 			children = (
 				535B0A301D464C5200CA0D91 /* Recruitment_TaskUITests.m */,
 				535B0A321D464C5200CA0D91 /* Info.plist */,
 			);
+			name = "Gra o Tron TaskUITests";
 			path = "Recruitment TaskUITests";
 			sourceTree = "<group>";
 		};
 		535B0A471D46551300CA0D91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				535B0A571D46838000CA0D91 /* CustomCell.h */,
-				535B0A581D46838000CA0D91 /* CustomCell.m */,
-				535B0A4C1D46614E00CA0D91 /* ArticleObject.h */,
-				535B0A4D1D46614E00CA0D91 /* ArticleObject.m */,
+				535B0A571D46838000CA0D91 /* Cell.h */,
+				535B0A581D46838000CA0D91 /* Cell.m */,
 				535B0A491D46572600CA0D91 /* WikiaCommunicator.h */,
 				535B0A4A1D46572600CA0D91 /* WikiaCommunicator.m */,
+				538021F31D4A4CAC00330D8D /* Core Data */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -191,24 +195,24 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		538021F31D4A4CAC00330D8D /* CoreData */ = {
+		538021F31D4A4CAC00330D8D /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				53FC8B9A1DBFBED5006F184E /* Article+CoreDataClass.h */,
+				53FC8B9B1DBFBED5006F184E /* Article+CoreDataClass.m */,
+				53FC8B9C1DBFBED5006F184E /* Article+CoreDataProperties.h */,
+				53FC8B9D1DBFBED5006F184E /* Article+CoreDataProperties.m */,
 				535B0A141D464C5200CA0D91 /* Recruitment_Task.xcdatamodeld */,
-				531468221D48C8F2000B5BB0 /* Article+CoreDataProperties.h */,
-				531468231D48C8F2000B5BB0 /* Article+CoreDataProperties.m */,
-				531468241D48C8F2000B5BB0 /* Article.h */,
-				531468251D48C8F2000B5BB0 /* Article.m */,
 			);
-			name = CoreData;
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		535B0A041D464C5100CA0D91 /* Recruitment Task */ = {
+		535B0A041D464C5100CA0D91 /* Gra o Tron */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 535B0A351D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment Task" */;
+			buildConfigurationList = 535B0A351D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o Tron" */;
 			buildPhases = (
 				535B0A011D464C5100CA0D91 /* Sources */,
 				535B0A021D464C5100CA0D91 /* Frameworks */,
@@ -218,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = "Recruitment Task";
+			name = "Gra o Tron";
 			productName = "Recruitment Task";
-			productReference = 535B0A051D464C5100CA0D91 /* Recruitment Task.app */;
+			productReference = 535B0A051D464C5100CA0D91 /* Gra o Tron.app */;
 			productType = "com.apple.product-type.application";
 		};
-		535B0A201D464C5200CA0D91 /* Recruitment TaskTests */ = {
+		535B0A201D464C5200CA0D91 /* Gra o TronTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 535B0A381D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment TaskTests" */;
+			buildConfigurationList = 535B0A381D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o TronTests" */;
 			buildPhases = (
 				535B0A1D1D464C5200CA0D91 /* Sources */,
 				535B0A1E1D464C5200CA0D91 /* Frameworks */,
@@ -236,14 +240,14 @@
 			dependencies = (
 				535B0A231D464C5200CA0D91 /* PBXTargetDependency */,
 			);
-			name = "Recruitment TaskTests";
+			name = "Gra o TronTests";
 			productName = "Recruitment TaskTests";
-			productReference = 535B0A211D464C5200CA0D91 /* Recruitment TaskTests.xctest */;
+			productReference = 535B0A211D464C5200CA0D91 /* Gra o TronTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		535B0A2B1D464C5200CA0D91 /* Recruitment TaskUITests */ = {
+		535B0A2B1D464C5200CA0D91 /* Gra o TronUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 535B0A3B1D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment TaskUITests" */;
+			buildConfigurationList = 535B0A3B1D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o TronUITests" */;
 			buildPhases = (
 				535B0A281D464C5200CA0D91 /* Sources */,
 				535B0A291D464C5200CA0D91 /* Frameworks */,
@@ -254,9 +258,9 @@
 			dependencies = (
 				535B0A2E1D464C5200CA0D91 /* PBXTargetDependency */,
 			);
-			name = "Recruitment TaskUITests";
+			name = "Gra o TronUITests";
 			productName = "Recruitment TaskUITests";
-			productReference = 535B0A2C1D464C5200CA0D91 /* Recruitment TaskUITests.xctest */;
+			productReference = 535B0A2C1D464C5200CA0D91 /* Gra o TronUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +269,7 @@
 		535B09FD1D464C5100CA0D91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Filip Olbromski";
 				TargetAttributes = {
 					535B0A041D464C5100CA0D91 = {
@@ -281,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 535B0A001D464C5100CA0D91 /* Build configuration list for PBXProject "Recruitment Task" */;
+			buildConfigurationList = 535B0A001D464C5100CA0D91 /* Build configuration list for PBXProject "Gra o Tron" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -294,9 +298,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				535B0A041D464C5100CA0D91 /* Recruitment Task */,
-				535B0A201D464C5200CA0D91 /* Recruitment TaskTests */,
-				535B0A2B1D464C5200CA0D91 /* Recruitment TaskUITests */,
+				535B0A041D464C5100CA0D91 /* Gra o Tron */,
+				535B0A201D464C5200CA0D91 /* Gra o TronTests */,
+				535B0A2B1D464C5200CA0D91 /* Gra o TronUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,7 +312,9 @@
 			files = (
 				538021F21D4A240500330D8D /* GameOfThrones.png in Resources */,
 				5311287D1D51F32100149797 /* like.png in Resources */,
+				53FD950B1DBCF1370012EF26 /* Cell.xib in Resources */,
 				535B0A1B1D464C5200CA0D91 /* LaunchScreen.storyboard in Resources */,
+				5314B9DB1DC0D3AE00995E83 /* Like It.png in Resources */,
 				535B0A181D464C5200CA0D91 /* Assets.xcassets in Resources */,
 				535B0A131D464C5200CA0D91 /* Main.storyboard in Resources */,
 			);
@@ -335,16 +341,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				531468271D48C8F2000B5BB0 /* Article.m in Sources */,
 				535B0A431D464EBE00CA0D91 /* DetailViewController.m in Sources */,
 				535B0A161D464C5200CA0D91 /* Recruitment_Task.xcdatamodeld in Sources */,
 				535B0A0D1D464C5200CA0D91 /* AppDelegate.m in Sources */,
-				531468261D48C8F2000B5BB0 /* Article+CoreDataProperties.m in Sources */,
+				53FC8B9E1DBFBED5006F184E /* Article+CoreDataClass.m in Sources */,
 				535B0A0A1D464C5200CA0D91 /* main.m in Sources */,
-				535B0A4E1D46614E00CA0D91 /* ArticleObject.m in Sources */,
 				535B0A401D464E9500CA0D91 /* MainViewController.m in Sources */,
 				535B0A4B1D46572600CA0D91 /* WikiaCommunicator.m in Sources */,
-				535B0A591D46838000CA0D91 /* CustomCell.m in Sources */,
+				53FC8B9F1DBFBED5006F184E /* Article+CoreDataProperties.m in Sources */,
+				535B0A591D46838000CA0D91 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +374,12 @@
 /* Begin PBXTargetDependency section */
 		535B0A231D464C5200CA0D91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 535B0A041D464C5100CA0D91 /* Recruitment Task */;
+			target = 535B0A041D464C5100CA0D91 /* Gra o Tron */;
 			targetProxy = 535B0A221D464C5200CA0D91 /* PBXContainerItemProxy */;
 		};
 		535B0A2E1D464C5200CA0D91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 535B0A041D464C5100CA0D91 /* Recruitment Task */;
+			target = 535B0A041D464C5100CA0D91 /* Gra o Tron */;
 			targetProxy = 535B0A2D1D464C5200CA0D91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,12 +418,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -457,12 +466,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -488,7 +500,7 @@
 				INFOPLIST_FILE = "Recruitment Task/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Recruitment-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Gra-o-Tron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -500,7 +512,7 @@
 				INFOPLIST_FILE = "Recruitment Task/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Recruitment-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Gra-o-Tron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -513,7 +525,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Recruitment-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recruitment Task.app/Recruitment Task";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gra o Tron.app/Gra o Tron";
 			};
 			name = Debug;
 		};
@@ -525,7 +537,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Filip-Olbromski.Recruitment-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recruitment Task.app/Recruitment Task";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gra o Tron.app/Gra o Tron";
 			};
 			name = Release;
 		};
@@ -554,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		535B0A001D464C5100CA0D91 /* Build configuration list for PBXProject "Recruitment Task" */ = {
+		535B0A001D464C5100CA0D91 /* Build configuration list for PBXProject "Gra o Tron" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				535B0A331D464C5200CA0D91 /* Debug */,
@@ -563,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		535B0A351D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment Task" */ = {
+		535B0A351D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o Tron" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				535B0A361D464C5200CA0D91 /* Debug */,
@@ -572,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		535B0A381D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment TaskTests" */ = {
+		535B0A381D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o TronTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				535B0A391D464C5200CA0D91 /* Debug */,
@@ -581,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		535B0A3B1D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Recruitment TaskUITests" */ = {
+		535B0A3B1D464C5200CA0D91 /* Build configuration list for PBXNativeTarget "Gra o TronUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				535B0A3C1D464C5200CA0D91 /* Debug */,
